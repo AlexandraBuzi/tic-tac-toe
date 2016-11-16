@@ -11,7 +11,7 @@ function circle1() {
   stepone.setAttribute("cx",230 )
   stepone.setAttribute("cy",90 )
   stepone.setAttribute("r", 20)
-  stepone.setAttribute("fill",)
+  stepone.setAttribute("fill","ffcccc")
   var canvas = document.getElementById("game-board")
   canvas.appendChild(stepone)
 }
