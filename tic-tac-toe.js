@@ -2,20 +2,27 @@
 // You can use the namespace variable that's defined here.
 var namespace = "http://www.w3.org/2000/svg"
 
-var color = "#ffcccc"
-var color2 = "#ffcc66"
-
-
+var turn = "protaganist"
 function circle1() {
+  if(turn=="protaganist"){
   var stepone = document.createElementNS(namespace, "circle")
   stepone.setAttribute("cx",230 )
   stepone.setAttribute("cy",90 )
   stepone.setAttribute("r", 20)
-  stepone.setAttribute("fill","ffcccc")
+  stepone.setAttribute("fill", "#ffcccc")
   var canvas = document.getElementById("game-board")
   canvas.appendChild(stepone)
-}
-
+  turn="antagonist"
+} else {
+  var stepone = document.createElementNS(namespace, "circle")
+  stepone.setAttribute("cx",230 )
+  stepone.setAttribute("cy",90 )
+  stepone.setAttribute("r", 20)
+  stepone.setAttribute("fill","#ffcc66")
+  var canvas = document.getElementById("game-board")
+  canvas.appendChild(stepone)
+  turn="protaganist"
+} else {
 function circle2() {
   var stepthree = document.createElementNS(namespace, "circle")
   stepthree.setAttribute("cx",90 )
@@ -24,6 +31,16 @@ function circle2() {
   stepthree.setAttribute("fill",)
   var canvas = document.getElementById("game-board")
   canvas.appendChild(stepthree)
+  turn = "antagonist"
+} else {
+  var stepthree = document.createElementNS(namespace, "circle")
+  stepthree.setAttribute("cx",90 )
+  stepthree.setAttribute("cy",90)
+  stepthree.setAttribute("r", 20)
+  stepthree.setAttribute("fill",)
+  var canvas = document.getElementById("game-board")
+  canvas.appendChild(stepthree)
+  turn = "antagonist"
 }
 function circle3() {
   var stepfour = document.createElementNS(namespace, "circle")
