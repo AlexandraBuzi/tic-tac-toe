@@ -107,7 +107,7 @@ function circle6() {
     step6.setAttribute("r",20)
     step6.setAttribute("fill","#ffcc66")
     var canvas = document.getElementById("game-board")
-    canvas.appendChild(step5)
+    canvas.appendChild(step6)
     turn="protagonist"
   }
 }
